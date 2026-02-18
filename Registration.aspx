@@ -1,4 +1,8 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" %>
+﻿<%@ Page Language="C#" 
+    AutoEventWireup="true" 
+    CodeBehind="Registration.aspx.cs" 
+    Inherits="Registration_Form.Registration_Form" %>
+
 
 <!DOCTYPE html>
 <html>
@@ -210,14 +214,6 @@
         ErrorMessage="Address is required"
         CssClass="text-danger"
         Display="Dynamic" />
-
-    <asp:RegularExpressionValidator ID="revAddress"
-        runat="server"
-        ControlToValidate="txtAddress"
-        ValidationExpression="^[a-zA-Z0-9\s]+$"
-        ErrorMessage="Only letters and numbers allowed (no special characters)"
-        CssClass="text-danger"
-        Display="Dynamic" />
 </div>
 
                    <!-- Vaccinated -->
@@ -249,6 +245,21 @@
                     </div>
 
                     <asp:Label ID="lblMessage" runat="server" CssClass="text-success mt-3"></asp:Label>
+                    <asp:Label ID="lblResult" runat="server" CssClass="text-success mt-3"></asp:Label>
+                    <asp:Label ID="lblResult1" runat="server" CssClass="text-success mt-3"></asp:Label>
+                    <asp:Label ID="lblResult2" runat="server" CssClass="text-success mt-3"></asp:Label>
+                    <asp:Label ID="lblResult3" runat="server" CssClass="text-success mt-3"></asp:Label>
+                    <asp:Label ID="lblResult5" runat="server" CssClass="text-success mt-3"></asp:Label>
+                    <asp:Label ID="lblResult6" runat="server" CssClass="text-success mt-3"></asp:Label>
+                    <asp:Label ID="lblSolution" runat="server" CssClass="text-success mt-3"></asp:Label>
+                    <asp:Label ID="lblLogical" runat="server" CssClass="text-success mt-3"></asp:Label>
+                    <asp:Label ID="lblForLoop" runat="server" CssClass="text-success mt-3"></asp:Label>
+                 <asp:Label ID="lblContinue" runat="server" CssClass="text-success mt-3"></asp:Label>
+                 <asp:Label ID="lblBreak" runat="server" CssClass="text-success mt-3"></asp:Label>
+                     <asp:Label ID="lblSwitch" runat="server" CssClass="text-success mt-3"></asp:Label>
+
+                    
+
 
                 </div>
             </div>
@@ -256,19 +267,9 @@
     </div>
 
     <!-- Server Side Code -->
-    <script runat="server">
-        protected void btnSubmit_Click(object sender, EventArgs e)
-        {
-            if (Page.IsValid)
-            {
-                lblMessage.Text = "Registration Successful!";
-            }
-        }
-
-    </script>
     <script>
         function toggleFileUpload(show) {
-            document.getElementById("uploadDiv").style.display = 
+            document.getElementById("uploadDiv").style.display =
                 show ? "block" : "none";
         }
     </script>
