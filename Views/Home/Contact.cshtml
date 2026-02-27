@@ -1,0 +1,82 @@
+﻿
+<main aria-labelledby="title">
+
+    @{
+        ViewBag.Title = "Contact Us";
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+
+    <style>
+        .contact-section {
+            background-color: #f8f9fa;
+            padding: 60px 0;
+        }
+
+        .contact-box {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+        }
+
+        footer {
+            background: #222;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            margin-top: 50px;
+        }
+    </style>
+
+    <div class="contact-section">
+        <div class="container">
+            <h2 class="text-center mb-4">Contact Us</h2>
+
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="contact-box">
+
+                        @if (ViewBag.Message != null)
+                        {
+                            <div class="alert alert-success">
+                                @ViewBag.Message
+                            </div>
+                        }
+
+                        <form method="post" action="/Home/Contact">
+                            <div class="mb-3">
+                                <label>Name</label>
+                                <input type="text" name="Name" class="form-control" required />
+                            </div>
+
+                            <div class="mb-3">
+                                <label>Email</label>
+                                <input type="email" name="Email" class="form-control" required />
+                            </div>
+
+                            <div class="mb-3">
+                                <label>Subject</label>
+                                <input type="text" name="Subject" class="form-control" required />
+                            </div>
+
+                            <div class="mb-3">
+                                <label>Message</label>
+                                <textarea name="MessageText" class="form-control" rows="4" required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary w-100">
+                                Send Message
+                            </button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 Ticket Booking System | All Rights Reserved</p>
+    </footer>
+
+</main>

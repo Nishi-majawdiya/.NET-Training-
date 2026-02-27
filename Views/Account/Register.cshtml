@@ -1,0 +1,101 @@
+﻿@model MVC_Application.Models.UserRegistration
+
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Registration Form</h2>
+
+    @if (ViewBag.Message != null)
+    {
+        <p>@ViewBag.Message</p>
+    }
+
+    @if (TempData["Success"] != null)
+    {
+        <div class="alert alert-success text-center">
+            @TempData["Success"]
+        </div>
+    }
+
+    @using (Html.BeginForm())
+    {
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <!-- First Name -->
+        <div class="card shadow p-3 mb-3">
+            @Html.LabelFor(m => m.FirstName, new { @class = "form-label fw-bold" })
+            @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.FirstName, "", new { @class = "text-danger" })
+        </div>
+
+        <!-- Last Name -->
+        <div class="card shadow p-3 mb-3">
+            @Html.LabelFor(m => m.LastName, new { @class = "form-label fw-bold" })
+            @Html.TextBoxFor(m => m.LastName, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.LastName, "", new { @class = "text-danger" })
+        </div>
+
+        <!-- Address -->
+        <div class="card shadow p-3 mb-3">
+            @Html.LabelFor(m => m.Address, new { @class = "form-label fw-bold" })
+            @Html.TextAreaFor(m => m.Address, new { @class = "form-control", rows = 3 })
+            @Html.ValidationMessageFor(m => m.Address, "", new { @class = "text-danger" })
+        </div>
+
+        <!-- Email -->
+        <div class="card shadow p-3 mb-3">
+            @Html.LabelFor(m => m.Email, new { @class = "form-label fw-bold" })
+            @Html.TextBoxFor(m => m.Email, new { @class = "form-control", type = "email" })
+            @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+        </div>
+
+        <!-- Password -->
+        <div class="card shadow p-3 mb-3">
+            @Html.LabelFor(m => m.Password, new { @class = "form-label fw-bold" })
+            @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+        </div>
+
+        <!-- Confirm Password -->
+        <div class="card shadow p-3 mb-3">
+            @Html.LabelFor(m => m.ConfirmPassword, new { @class = "form-label fw-bold" })
+            @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.ConfirmPassword, "", new { @class = "text-danger" })
+        </div>
+
+        <!-- Gender -->
+        <div class="card shadow p-3 mb-3">
+            <label class="form-label fw-bold d-block">Gender</label>
+
+            <div class="form-check form-check-inline">
+                @Html.RadioButtonFor(m => m.Gender, "Male", new { @class = "form-check-input", id = "male" })
+                <label class="form-check-label" for="male">Male</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+                @Html.RadioButtonFor(m => m.Gender, "Female", new { @class = "form-check-input", id = "female" })
+                <label class="form-check-label" for="female">Female</label>
+            </div>
+
+            @Html.ValidationMessageFor(m => m.Gender, "", new { @class = "text-danger d-block" })
+        </div>
+
+        <!-- City -->
+        <div class="card shadow p-3 mb-3">
+            @Html.LabelFor(m => m.City, new { @class = "form-label fw-bold" })
+            @Html.DropDownListFor(m => m.City,
+                new SelectList(new List<string> { "Ujjain", "Indore", "Bhopal", "Gwalior" }),
+                "Select City",
+                new { @class = "form-select" })
+            @Html.ValidationMessageFor(m => m.City, "", new { @class = "text-danger" })
+        </div>
+
+        <!-- Submit -->
+        <div class="card shadow p-3 mb-3 text-center">
+            <input type="submit" value="Register" class="btn btn-primary w-100" />
+        </div>
+    }
+</div>

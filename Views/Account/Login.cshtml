@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "login";
+}
+
+<h2>login</h2>
+
+@if (ViewBag.Error != null)
+{
+    <p style="color:red">@ViewBag.Error</p>
+}
+
+@using (Html.BeginForm("Login", "Account", FormMethod.Post))
+{
+    <div>
+        <label>Username:</label>
+        <input type="text" name="username" />
+    </div>
+
+    <div>
+        <label>Password:</label>
+        <input type="password" name="password" />
+    </div>
+
+    <br />
+
+    <button type="submit">Login</button>
+}
