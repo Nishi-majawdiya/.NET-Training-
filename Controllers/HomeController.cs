@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Serilog;
 
 namespace MVCProject.Controllers
 {
@@ -10,8 +11,13 @@ namespace MVCProject.Controllers
     {
         public ActionResult Index()
         {
+           
+            Log.Information("Index page loaded successfully");
+            Log.Fatal("Fatal test log");
+
             return View();
         }
+        
 
         public ActionResult About()
         {
@@ -26,5 +32,7 @@ namespace MVCProject.Controllers
 
             return View();
         }
+
+        
     }
 }

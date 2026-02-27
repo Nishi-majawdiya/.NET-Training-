@@ -1,0 +1,71 @@
+2026-02-27 13:17:08.101 +05:30 [INF] Index page loaded
+2026-02-27 13:17:08.199 +05:30 [ERR] Divide by zero error occurred
+System.DivideByZeroException: Attempted to divide by zero.
+   at MVCProject.Controllers.HomeController.Index() in D:\Work\MVCProject\Controllers\HomeController.cs:line 20
+2026-02-27 13:17:13.119 +05:30 [INF] Index page loaded
+2026-02-27 13:17:13.192 +05:30 [ERR] Divide by zero error occurred
+System.DivideByZeroException: Attempted to divide by zero.
+   at MVCProject.Controllers.HomeController.Index() in D:\Work\MVCProject\Controllers\HomeController.cs:line 20
+2026-02-27 13:17:15.023 +05:30 [INF] Index page loaded
+2026-02-27 13:17:15.074 +05:30 [ERR] Divide by zero error occurred
+System.DivideByZeroException: Attempted to divide by zero.
+   at MVCProject.Controllers.HomeController.Index() in D:\Work\MVCProject\Controllers\HomeController.cs:line 20
+2026-02-27 13:17:18.152 +05:30 [INF] Index page loaded
+2026-02-27 13:17:18.201 +05:30 [ERR] Divide by zero error occurred
+System.DivideByZeroException: Attempted to divide by zero.
+   at MVCProject.Controllers.HomeController.Index() in D:\Work\MVCProject\Controllers\HomeController.cs:line 20
+2026-02-27 13:18:32.517 +05:30 [INF] Index page loaded
+2026-02-27 13:18:32.641 +05:30 [ERR] Divide by zero error occurred
+System.DivideByZeroException: Attempted to divide by zero.
+   at MVCProject.Controllers.HomeController.Index() in D:\Work\MVCProject\Controllers\HomeController.cs:line 20
+2026-02-27 13:18:38.218 +05:30 [INF] Index page loaded
+2026-02-27 13:18:38.262 +05:30 [ERR] Divide by zero error occurred
+System.DivideByZeroException: Attempted to divide by zero.
+   at MVCProject.Controllers.HomeController.Index() in D:\Work\MVCProject\Controllers\HomeController.cs:line 20
+2026-02-27 13:18:39.336 +05:30 [INF] Index page loaded
+2026-02-27 13:18:39.400 +05:30 [ERR] Divide by zero error occurred
+System.DivideByZeroException: Attempted to divide by zero.
+   at MVCProject.Controllers.HomeController.Index() in D:\Work\MVCProject\Controllers\HomeController.cs:line 20
+2026-02-27 13:18:41.094 +05:30 [INF] Index page loaded
+2026-02-27 13:18:41.137 +05:30 [ERR] Divide by zero error occurred
+System.DivideByZeroException: Attempted to divide by zero.
+   at MVCProject.Controllers.HomeController.Index() in D:\Work\MVCProject\Controllers\HomeController.cs:line 20
+2026-02-27 13:23:23.702 +05:30 [INF] Index page loaded
+2026-02-27 13:23:28.327 +05:30 [INF] Index page loaded
+2026-02-27 13:23:30.482 +05:30 [INF] Index page loaded
+2026-02-27 13:23:32.208 +05:30 [INF] Index page loaded
+2026-02-27 13:24:13.101 +05:30 [INF] Index page loaded
+2026-02-27 13:24:24.325 +05:30 [INF] Index page loaded
+2026-02-27 13:28:50.364 +05:30 [INF] Index page loaded successfully
+2026-02-27 13:28:54.614 +05:30 [INF] Index page loaded successfully
+2026-02-27 13:28:56.989 +05:30 [INF] Index page loaded successfully
+2026-02-27 13:28:58.581 +05:30 [INF] Index page loaded successfully
+2026-02-27 13:33:22.126 +05:30 [INF] Application Started Successfully
+2026-02-27 13:33:22.741 +05:30 [INF] Index page loaded successfully
+2026-02-27 13:33:28.167 +05:30 [INF] Index page loaded successfully
+2026-02-27 13:33:33.686 +05:30 [INF] Index page loaded successfully
+2026-02-27 14:01:53.089 +05:30 [INF] Application Started Successfully
+2026-02-27 14:01:54.282 +05:30 [INF] Index page loaded successfully
+2026-02-27 14:01:59.438 +05:30 [INF] Index page loaded successfully
+2026-02-27 14:02:01.821 +05:30 [INF] Index page loaded successfully
+2026-02-27 16:04:55.109 +05:30 [INF] Application Started Successfully
+2026-02-27 16:04:56.318 +05:30 [INF] Index page loaded successfully
+2026-02-27 16:04:56.318 +05:30 [FTL] Fatal test log
+2026-02-27 16:05:01.538 +05:30 [INF] Index page loaded successfully
+2026-02-27 16:05:01.538 +05:30 [FTL] Fatal test log
+2026-02-27 16:05:05.848 +05:30 [INF] Index page loaded successfully
+2026-02-27 16:05:05.848 +05:30 [FTL] Fatal test log
+2026-02-27 16:05:07.107 +05:30 [INF] Index page loaded successfully
+2026-02-27 16:05:07.107 +05:30 [FTL] Fatal test log
+2026-02-27 16:18:02.270 +05:30 [INF] Application Started Successfully
+2026-02-27 16:18:03.527 +05:30 [INF] Index page loaded successfully
+2026-02-27 16:18:03.527 +05:30 [FTL] Fatal test log
+2026-02-27 16:18:08.820 +05:30 [INF] Index page loaded successfully
+2026-02-27 16:18:08.820 +05:30 [FTL] Fatal test log
+2026-02-27 16:18:18.369 +05:30 [INF] Login attempt for Username: admin from IP: ::1
+2026-02-27 16:18:18.369 +05:30 [INF] Login SUCCESS for Username: admin
+2026-02-27 16:19:36.415 +05:30 [INF] Application Started Successfully
+2026-02-27 16:19:37.535 +05:30 [INF] Index page loaded successfully
+2026-02-27 16:19:37.535 +05:30 [FTL] Fatal test log
+2026-02-27 16:19:52.574 +05:30 [INF] Login attempt for Username: nishi from IP: ::1
+2026-02-27 16:19:52.574 +05:30 [WRN] Login FAILED for Username: nishi from IP: ::1

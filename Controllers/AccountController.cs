@@ -1,6 +1,7 @@
 ﻿using MVC_Application.Filters;
 using System;
 using System.Web.Mvc;
+using Serilog;
 
 namespace MVC_Application.Controllers
 {
@@ -14,26 +15,38 @@ namespace MVC_Application.Controllers
             return View();
         }
 
-        
+
         // POST: Login
-  
+
         [HttpPost]
-        [MyException]   // Exception filter only here
+        [MyException]   // execption filter
         public ActionResult Login(string username, string password)
         {
+            string userIP = Request.UserHostAddress;
+
+            // Log login attempt
+            Log.Information("Login attempt for Username: {Username} from IP: {IP}",
+                            username, userIP);
+
             if (username == "admin" && password == "1234")
             {
                 Session["User"] = username;
+
+                Log.Information("Login SUCCESS for Username: {Username}", username);
+
                 return RedirectToAction("Register");
             }
 
-            // Trigger exception for wrong login
+            // If login fails
+            Log.Warning("Login FAILED for Username: {Username} from IP: {IP}",
+                        username, userIP);
+
             throw new Exception("Invalid Username or Password!");
         }
 
-       
+
         // GET: Register
-     
+
         [AuthFilter]
         [MyActionFilter]
         [MyResultFilter]
